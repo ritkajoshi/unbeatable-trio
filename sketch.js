@@ -6,40 +6,45 @@ let board = [
 
   let w;
   let h;
-
   let ai='X';
   let human='O';  
-  let currentPlayer=human;
+  let currentPlayer = human;
 
   function setup() {
     createCanvas(400, 400);
-     frameRate(30);
-      w=width/3;
-    h=height/3; 
-   nextturn();
+    frameRate(30);
+    w=width/3;
+    h=height/3;
+    //nextturn(); //first player is human = 'O'
   }
-  
-  function equals3(a, b, c) {
-    return a == b && b == c && a != '';
-  }
-  
+  function mousePressed() {
+    if(currentPlayer==human){
+      //human turn
+      let i=Math.floor(mouseX /w);
+      let j= Math.floor(mouseY /h);
+      //if valid
+      if(board[i][j]==''){
+        board[i][j]='O';
+        currentPlayer=ai;
+        nextturn();
+      }
+    }
+  }  
+ 
   function checkWinner(board) {
-    let winner = null;
-  
+    let winner = null;      
     // horizontal
     for (let i = 0; i < 3; i++) {
       if (equals3(board[i][0], board[i][1], board[i][2])) {
         winner = board[i][0];
       }
-    }
-  
+    } 
     // Vertical
     for (let i = 0; i < 3; i++) {
       if (equals3(board[0][i], board[1][i], board[2][i])) {
         winner = board[0][i];
       }
-    }
-  
+    }  
     // Diagonal
     if (equals3(board[0][0], board[1][1], board[2][2])) {
       winner = board[0][0];
@@ -54,33 +59,26 @@ let board = [
           openspots++;
         }
       }
-    }
-  
-    if (winner == null && openspots==0) {
+    }  
+      
+    if (winner == null && openspots==0) 
       return 'tie';
-    } else {
+    else 
       return winner;
-    }
+
   }
 
-  function mousePressed() {
-    if(currentPlayer==human){
-      //human turn
-      let i=Math.floor(mouseX /w);
-      let j= Math.floor(mouseY /h);
-      ///if valid
-      if(board[i][j]==''){
-        board[i][j]='O';
-        currentPlayer=ai;
-        nextturn();
-      }
-    }
+  
+
+  function equals3(a, b, c) {
+    return a == b && b == c && a != '';
   }
+  
   
   function draw() {
     background(255);
-    // width=400;
-    // height=400;
+     width=400;
+     height=400;
     w = width / 3;
     h = height/ 3;
     strokeWeight(4);
@@ -105,10 +103,7 @@ let board = [
           line(x + r, y - r, x - r, y + r);
         }
       }
-    }
-   
-
-  
+    }  
     let result = checkWinner(board);
     if (result != null) {
       noLoop();
@@ -123,7 +118,7 @@ let board = [
       if(currentPlayer==ai){
       nextturn();
       }else{
-        currentPlayer=human;
+        currentPlayer = human;
       }
     }
   }
