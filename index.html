@@ -14,11 +14,11 @@
             <label>Depth</label>
             <div class="depth_choices" id="depth">
               <ul>
-                <li data-value="1">1</li>
-                <li data-value="2">2</li>
-                <li data-value="3">3</li>
-                <li data-value="4">4</li>
-                <li data-value="-1" class="active">Unlimited</li>
+                <button id="depth1">1</button>
+                <button id="depth2">2</button>
+                <button id="depth3">3</button>
+                <button id="depth4">4</button>
+                <button id="unlimited">Unlimited</button>
               </ul>
             </div>
           </div>
@@ -27,21 +27,23 @@
             <label>Starting Player</label>
             <div class="starting_player_choices" id="starting_player">
               <ul>
-                <li data-value="1" class="active">Human</li>
-                <li data-value="0">Computer</li>
+                <button onclick="humanPlayer()">Human</button>
+                <button onclick="computerPlayer()">Computer</button>
               </ul>
             </div>
           </div>
   
-          <button id="newgame">New Game</button>
+          
         </div>
       </div>
       
       <div id="board_wrap">
         <div id="board"></div>
       </div>
-  
     </div>
+    <form onreset=setup()>
+      <button id="newgame">New Game</button>
+    </form>  
     <script src="sketch.js"></script>
     <script src="minmax.js"></script>
 

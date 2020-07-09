@@ -8,15 +8,21 @@ let board = [
   let h;
   let ai='X';
   let human='O';  
-  let currentPlayer = human;
-
-  function setup() {
+  let currentPlayer;
+  let depth; /////////////////////////////////////////////
+  function humanPlayer(){
+    currentPlayer = human;
+  }
+  function computerPlayer(){
+    currentPlayer = ai;
+  }
+    function setup() {
     createCanvas(400, 400);
     frameRate(30);
     w=width/3;
     h=height/3;
-    //nextturn(); //first player is human = 'O'
   }
+
   function mousePressed() {
     if(currentPlayer==human){
       //human turn
