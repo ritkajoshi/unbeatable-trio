@@ -7,41 +7,40 @@
     <script src="https://cdn.JsDelivr.net/npm/p5"></script>
     <meta charset="utf-8"/>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    
-          <div class="field">
-            <label>Depth</label>
-            <div class="depth_choices" id="depth">
-              <ul>
-                <li data-value="1">1</li>
-                <li data-value="2">2</li>
-                <li data-value="3">3</li>
-                <li data-value="4">4</li>
-                <li data-value="-1" class="active">Unlimited</li>
-              </ul>
-            </div>
+          <div class ="container">
+            
+                <div class="field">
+                  <label>Depth</label>
+                  <div class="depth_choices" id="depth">
+                    <ul>
+                      <li data-value="1">1</li>
+                      <li data-value="2">2</li>
+                          <li data-value="3">3</li>
+                          <li data-value="4">4</li>
+                          <li data-value="-1" class="active">Unlimited</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                <div class="field">
+                  <label>Starting Player</label>
+                    <div class="starting_player_choices" id="starting_player">
+                      <ul>
+                        <li data-value="1" class="active">Human</li>
+                        <li data-value="0">Computer</li>
+                      </ul>
+                    </div>
+                  </div>
+              
+                    <button class="newgame">New Game</button>
+                  <div id="board_wrap">
+                  <div id="board"></div>
+                  </div>
+              
           </div>
-  
-          <div class="field">
-            <label>Starting Player</label>
-            <div class="starting_player_choices" id="starting_player">
-              <ul>
-                <li data-value="1" class="active">Human</li>
-                <li data-value="0">Computer</li>
-              </ul>
-            </div>
-          </div>
-  
-          <button id="newgame">New Game</button>
-        </div>
-      </div>
-      
-      <div id="board_wrap">
-        <div id="board"></div>
-      </div>
-  
-    </div>
     <script src="sketch.js"></script>
     <script src="minmax.js"></script>
 

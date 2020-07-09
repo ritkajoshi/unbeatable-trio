@@ -1,7 +1,50 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: rgb(192, 235, 220);
+    font-family: Lucida Sans ;
 }
+  
+.container {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .board_wrap{
+    
+  }
+  .board{
+    height: 100px;
+    width: 100px;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+    line-height: 100px;
+  }
+.a:hover {
+    outline-width: 0; }
+.newgame{
+
+    background-color: rgb(255, 237, 159);
+   
+    border:2px,solid, black;
+    color: black;
+    padding: 14px 40px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+}
+.newgame:hover{
+    background-color: #ffea71; 
+    color: black;
+}
+
 
 canvas {
     display: block;
