@@ -7,20 +7,13 @@ html, body {
     margin: 0px;
     padding: 0px;
     font-weight: 600;
-    
-
     text-align: left;
-    text-shadow: 2px 2px 5px; 
-
-    
+    text-shadow: 2px 2px 5px;     
 }
 .field{
     font-size: large;
     float:left;
-}
-
-
-  
+}  
 .container {
     width: 1000px;
     height: 125px;
@@ -42,8 +35,8 @@ html, body {
 
     background-color: rgb(255, 237, 159);
    
-    border:2px,solid, black;
-    color: black;
+    border:2px,solid, white;
+    color: white;
     padding: 14px 40px;
     text-align: center;
     font-weight: bold;
@@ -56,10 +49,8 @@ html, body {
 }
 .button:hover{
     background-color: #ffea71; 
-    color: black;
+    color: white;
 }
-
-
 canvas {
     display: block; 
 }

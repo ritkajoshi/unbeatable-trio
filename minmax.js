@@ -1,5 +1,5 @@
 function nextturn(){
-    //ai to make its turn
+    
     let bestscore= -Infinity;
     let move;
     for(let i=0;i<3;i++)
@@ -10,7 +10,7 @@ function nextturn(){
            if(board[i][j]=='')
            {
                board[i][j]=ai;
-               let score = maxmin(board,3,false);
+               let score = maxmin(board,depth,false);
                board[i][j]='';
                if(score>bestscore)
                {
