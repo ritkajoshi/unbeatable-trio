@@ -16,8 +16,9 @@ let board = [
   function computerPlayer(){
     currentPlayer = ai;
   }
-    function setup() {
+  function setup() {
     createCanvas(400, 400);
+   
     frameRate(30);
     w=width/3;
     h=height/3;
@@ -74,12 +75,9 @@ let board = [
 
   }
 
-  
-
   function equals3(a, b, c) {
     return a == b && b == c && a != '';
   }
-  
   
   function draw() {
     background(255);
