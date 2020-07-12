@@ -4,7 +4,7 @@ let board = [
     ['', '', ''],
     ['', '', '']
   ];
-
+  var canvas;
   let w;
   let h;
   let ai='X';
@@ -24,8 +24,13 @@ let board = [
   {
       depth = -1;
   }
+  // function windowResized(){
+  //   resizeCanvas(windowWidth,windowHeight);
+  // }
   function setup() {
-    createCanvas(400, 400);   
+   canvas= createCanvas(400,400);
+  //  canvas.position(0,0);
+   canvas.position(windowWidth/2-200,windowHeight/2-200);   
     frameRate(30);
     w=width/3;
     h=height/3;

@@ -1,3 +1,4 @@
+///////used alpha beta pruning in the code
 function nextturn(){
     
     let bestscore= -Infinity;
@@ -10,7 +11,7 @@ function nextturn(){
            if(board[i][j]=='')
            {
                board[i][j]=ai;
-               let score = maxmin(board,depth,false);
+               let score = maxmin(board,depth,-Infinity,Infinity,false);
                board[i][j]='';
                if(score>bestscore)
                {
@@ -24,7 +25,7 @@ function nextturn(){
     currentPlayer=human;
 } 
 
-function maxmin(board,depth,ismaximising)
+function maxmin(board,depth,alpha,beta,ismaximising)
 {
 
     let result = checkWinner(board);
@@ -38,7 +39,7 @@ function maxmin(board,depth,ismaximising)
             return 0;
     }
     let bestscore;
-    if(ismaximising==true){ //i.e human
+    if(ismaximising==true){ //i.e ai
         bestscore= -Infinity;
         for(let i=0;i<3;i++){
             for(let j=0;j<3;j++){
@@ -46,17 +47,21 @@ function maxmin(board,depth,ismaximising)
                 if(board[i][j]=='')
                 {
                     board[i][j]=ai;
-                    let score=maxmin(board,depth-1,false);
+                    let score=maxmin(board,depth-1,alpha,beta,false);
                     board[i][j]='';
                     if(score>bestscore){
                         bestscore=score;
                     }
+                    alpha=max(alpha,score);
+                    if(beta<=alpha){
+                        return bestscore;
+                    }
                 }
+               
             }
         }
-        
     }
-    else //isMaximising == false i.e minimising i.e AI
+    else //isMaximising == false i.e minimising i.e human
     {
         bestscore = Infinity;
         for(let i=0;i<3;i++){
@@ -64,12 +69,17 @@ function maxmin(board,depth,ismaximising)
                 if(board[i][j]=='')
                 {
                     board[i][j]=human;
-                    let score=maxmin(board,depth-1,true);
+                    let score=maxmin(board,depth-1,alpha,beta,true);
                     board[i][j]='';
                     if(score<bestscore){
                         bestscore=score;
                     }
+                    beta=min(beta,score);
+                    if(beta<=alpha){
+                        return bestscore;
+                    }
                 }
+               
             }
         }
     }
