@@ -1,5 +1,4 @@
-html, body {
-    
+html, body {    
     font-family: Lucida Sans ;
     background-image: url(./image/mars.jpg);
     background-size: cover;
@@ -7,37 +6,31 @@ html, body {
     margin: 0px;
     padding: 0px;
     font-weight: 600;
+    color: white;
     text-align: left;
     text-shadow: 2px 2px 5px;     
 }
-.field{
+.leftfield{
     font-size: large;
     float:left;
+    border: 10px;
 }  
+.rightfield{
+    font-size: large;
+    float: right;
+    border: 10px;
+}
 .container {
     width: 1000px;
     height: 125px;
     margin: auto;
-    margin-right: 50px;
   }
- 
-  .board{  
-    height: 100px;
-    width: 100px;
-    float: left;
-    font-size: 100px;
-    text-align: center;
-    line-height: 100px;
-  }
+button{
 
-
-.button{
-
-    background-color: rgb(255, 237, 159);
-   
+    background-color: palevioletred;   
     border:2px,solid, white;
-    color: white;
-    padding: 14px 40px;
+    color:white;
+    padding: 14px 20px;
     text-align: center;
     font-weight: bold;
     display: inline-block;
@@ -51,7 +44,7 @@ html, body {
     background-color: #ffea71; 
     color: white;
 }
-canvas {
+.canvas {
     display: block; 
 }
 

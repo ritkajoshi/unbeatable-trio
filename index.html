@@ -5,9 +5,6 @@
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-   
-   
-    
     <meta charset="utf-8"/>
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Tic-Tac-Toe</title>
@@ -15,39 +12,30 @@
   <body>
 
           <div class ="container">
-              <div class="field">
-                  <label>Depth</label>
-                  <div class="depth_choices" id="depth">
-                    <button onclick="depth1()">Dumb</button>
-                    <button onclick="depth1()">Intelligent</button>                        
+              <div class="leftfield">
+                <label>Game Mode</label>
+                  <div>
+                    <a href='hvh.html'> 
+                    <button class="button">Human VS Human</button></a> 
+                    <button class ="button">Human VS AI</button>                        
                  </div>
-                </div>
-      
-              <div class="field">
+                <label>Depth</label>
+                  <div class="rightfield">
+                    <button class = "button" onclick="depth1()">Dumb</button>
+                    <button class = "button" onclick="depth1()">Intelligent</button>                        
+                 </div>
+              </div>
                 <label>Starting Player</label>
-                <div class="starting_player_choices" id="starting_player">
-                   <button onclick="humanPlayer()">Human</button>
-                    <button  onclick="computerPlayer()">Computer</button>
+                <div class="leftfield">
+                   <button class = "button"onclick="humanPlayer()">Human</button>
+                    <button class = "button"onclick="computerPlayer()">Computer</button>
                  </div>
-              </div>
-              <div id="board_wrap">   
-                <div id="board"></div>
-              </div>
-                </div>
-                <form onreset=setup()>     
-                  <button id="newgame">New Game</button>
-                </form>  
-                 
-              </div>
-              
-            </div>
-          </div>
-        
-      
-
+              <form class="leftfield" onreset=setup()>     
+                <button class = "button">New Game</button>
+              </form>  
+          </div>              
         <script src="sketch.js"></script>
         <script src="minmax.js"></script>
         <script src="https://cdn.JsDelivr.net/npm/p5"></script>
-
   </body>
 </html>
