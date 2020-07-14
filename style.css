@@ -4,23 +4,27 @@ html, body {
     background-size: cover;
     background-position: center;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     font-weight: 600;
     color: white;
     text-align: left;
     text-shadow: 2px 2px 5px;     
 }
 .leftfield{
+    padding: 10px;
+    margin:5px;
     font-size: large;
     float:left;
     border: 10px;
 }  
 .rightfield{
+    padding: 10px;
     font-size: large;
     float: right;
     border: 10px;
 }
 .container {
+    padding: 10px;
     width: 1000px;
     height: 125px;
     margin: auto;
