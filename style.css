@@ -46,7 +46,7 @@ button{
 }
 .button:hover{
     background-color: #ffea71; 
-    color: white;
+    color: black;
 }
 .canvas {
     display: block; 
