@@ -8,7 +8,15 @@ let w;
 let h;
 let human1 ='X';
 let human2 ='O';  
-let currentPlayer;
+let currentPlayer = human1;
+function X()
+  {
+    currentPlayer = human1;
+  }
+  function O()
+  {
+    currentPlayer = human2;
+  }
 
 // function human1(){
 //   currentPlayer = human1;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   
+    <meta charset="utf-8"/>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>4 X 4</title>
+  </head>
+  <body>     
+    <h1 style="text-align: center; color:white;">Human VS Human 4x4</h1>  
+   
+    <a href="index.html"> 
+      <button class = "button">Home</button> </a> 
+    <div class="container"> 
+            <div class="leftfield">
+              
+              <div>
+                <label>Choose Starting Player</label>
+                  <button class = "button"onclick="X()">X</button>
+                  <button class = "button"onclick="O()">O</button>
+                  <br>
+               </div>  
+              <br>
+              <form onreset=setup()>   
+                <button class = "NewGame">New Game</button>
+              </form> 
+                              
+            </div>            
+    </div>                   
+    <script src="4x4.js"></script>          
+    <script src="https://cdn.JsDelivr.net/npm/p5"></script>
+  </body>
+</html>

@@ -30,7 +30,7 @@ let board = [
   function setup() {
    canvas= createCanvas(400,400);
   //  canvas.position(0,0);
-   canvas.position(windowWidth/2-200,windowHeight/2-200);   
+   canvas.position(windowWidth/2-200,windowHeight/2-100);   
     frameRate(30);
     w=width/3;
     h=height/3;

@@ -10,17 +10,27 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Human VS Human</title>
   </head>
-  <body>              
+  <body>    
+    <h1 style="text-align: center; color:white;">Human VS Human 3x3</h1>   
+    <a href="index.html"> 
+    <button class = "button">Home</button></a>
+    <br>
     <div class="container"> 
-            <div class="field">
-                <a href="index.html"> 
-                <button class = "button">Human Vs Computer</button>
+            <div class="leftfield">           
+                <div>
+                  <label>Choose Starting Player</label>
+                    <button class = "button"onclick="X()">X</button>
+                    <button class = "button"onclick="O()">O</button>
+                    <br>
+                 </div>
+                <br>
+                <form onreset=setup()>  
+                  <button class = "NewGame">New Game</button>
+                </form>             
                 
-              </div>
-    </div>
-    <form onreset=setup()>     
-    <button class = "button">New Game</button>
-    </form>                  
+            </div>
+             
+    </div>                     
     <script src="hvhjs.js"></script>        
     <script src="https://cdn.JsDelivr.net/npm/p5"></script>
   </body>

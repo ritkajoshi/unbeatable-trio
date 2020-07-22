@@ -10,26 +10,17 @@ let board = [
   var canvas;
   let w;
   let h;
-  let ai='X';
-  let human='O';  
-  let currentPlayer=human;
-  // let depth; /////////////////////////////////////////////
-  // function humanPlayer(){
-  //   currentPlayer = human;
-  // }
-  // function computerPlayer(){
-  //   currentPlayer = ai;
-  // }
-  // function dumb(){
-  //   depth = 1
-  // }
-  // function intelligent()
-  // {
-  //     depth = -1;
-  // }
-  // function windowResized(){
-  //   resizeCanvas(windowWidth,windowHeight);
-  // }
+  let human1='X';
+  let human2='O';  
+  let currentPlayer;
+  function X()
+  {
+    currentPlayer = human1;
+  }
+  function O()
+  {
+    currentPlayer = human2;
+  }
   function setup() {
    canvas= createCanvas(400,400);
   //  canvas.position(0,0);
@@ -40,17 +31,20 @@ let board = [
   }
   
   function mousePressed() {
-    if(currentPlayer==human){  
-      //human turn
-      let i=Math.floor(mouseX /w);
-      let j= Math.floor(mouseY /h);
-      //if valid
-      if(board[i][j]==''){
-        board[i][j]='O';
-        currentPlayer=ai;
-        nextturn();
+    let i=Math.floor(mouseX /w);
+    let j= Math.floor(mouseY /h);
+    //if valid
+    if(board[i][j]==''){
+      if(currentPlayer == human1)
+      {  
+          board[i][j]='X';
+          currentPlayer=human2;
       }
-    }
+      else{
+          board[i][j]='O';
+          currentPlayer=human1;
+      }
+    } 
   }  
   
   function checkWinner(board) {
@@ -136,10 +130,10 @@ let board = [
         resultP.html(`${result} wins!`);
       }
     }else {
-      if(currentPlayer==ai){
-      nextturn();
+      if(currentPlayer==human1){
+        currentPlayer=human1;
       }else{
-        currentPlayer = human;
+        currentPlayer=human2;
       }
     }
   }

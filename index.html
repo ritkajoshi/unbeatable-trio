@@ -10,30 +10,45 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-
           <div class ="container">
               <div class="leftfield">
-                <label>Game Mode</label>
-                  <div>
+                <div>
+                    <label>Choose a Game Mode : </label>
+                    <button class ="button">Human VS AI</button>
                     <a href="hvh.html"> 
-                    <button>Human VS Human</button></a> 
-                    <button class ="button">Human VS AI</button>                        
+                      <button class="button">Human VS Human 3x3</button></a> 
+                    <a href="4x4html.html">
+                    <button class ="button">Human vs Human 4x4</button></a> 
+                    <a href="6x6html.html">
+                      <button class ="button">Human vs Human 6x6</button></a>                        
                  </div>
-                <label>Depth</label>
-                  <div class="rightfield">
+              </div>
+          </div>
+          <h1 style="text-align: center; color:white;">Human VS AI</h1>
+         <div class ="container">
+              <div class="leftfield">      
+                  <div>
+                    <label>Choose Depth</label>
                     <button class = "button" onclick="depth1()">Dumb</button>
                     <button class = "button" onclick="depth1()">Intelligent</button>                        
                  </div>
-              </div>
-                <label>Starting Player</label>
-                <div class="leftfield">
-                   <button class = "button"onclick="humanPlayer()">Human</button>
+                 <br>
+                 <div>
+                  <label>Choose Starting Player</label>
+                    <button class = "button"onclick="humanPlayer()">Human</button>
                     <button class = "button"onclick="computerPlayer()">Computer</button>
+                    <br>
                  </div>
-              <form class="leftfield" onreset=setup()>     
-                <button class = "button">New Game</button>
-              </form>  
-          </div>              
+                 <br>
+                 <div>                                 
+                  <form onreset=setup()>  
+                       
+                  <button class = "NewGame">New Game</button>
+                  </form>
+                </div>  
+                                
+                </div>                  
+            </div>                            
         <script src="sketch.js"></script>
         <script src="minmax.js"></script>
         <script src="https://cdn.JsDelivr.net/npm/p5"></script>
