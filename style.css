@@ -48,6 +48,10 @@ button{
     background-color: #ffea71; 
     color: black;
 }
+.button:focus{
+    background-color: #ffea71
+    
+}
 .canvas {
     display: block; 
 }
