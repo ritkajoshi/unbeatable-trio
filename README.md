@@ -12,5 +12,8 @@ the user can have four options as follows:
 
 The algorithms used in the game are:
 
-In the HUMAN VS AI part of the game , we have used the alpha beta pruning so that the minmax algorithm can be made more efficient.
-In the other components of the game which are two human player game , no algorithma were required as they are human specific games.
+In the HUMAN VS AI part of the game , we have used the alpha beta pruning so that the minimax algorithm can be made more efficient.
+The algorithm evaluates the moves that lead to a terminal state based on the player's turn. It will choose the move with maximum score when it is the AI’s turn and choose the move with the minimum score when it is the human player’s turn. Using this strategy, minimax avoids losing to the human player.
+
+In the other components of the game which are two human player game , no algorithms were required as they are human specific games.
+
